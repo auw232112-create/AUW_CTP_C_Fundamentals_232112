@@ -1,0 +1,19 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int numbers[5];
+    int sum = 0;
+    float average;
+
+    for (int i = 0; i < 5; i++)
+    {
+        numbers[i] = get_int("Enter number %i: ", i + 1);
+        sum += numbers[i];
+    }
+    average = (float)sum /5.0;
+    printf("Average = %.2f\n", average);
+
+    return 0;
+}
